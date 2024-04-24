@@ -1,0 +1,191 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+body {
+  background-color: #EFEDDF; 
+font-family:'Open Sans';
+}
+
+.centriraj {
+  width: 900px;
+  margin: 0 auto;
+  margin-top: 80px;
+  background-color: #CCCC99;
+  padding: 20px;
+  border-radius: 13px;
+  margin-bottom: 80px;
+  height: auto;
+  min-height: 400px; 
+  display: table;
+  padding-bottom: 70px;
+
+}
+  .centriraj h2 {
+    font-family: 'Open Sans';
+    margin-bottom: 40px; }
+
+input[type=text] {
+  padding: 10px;
+  width: 80%;
+  height: 80px;
+  float: left;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: gray;
+  margin-right: 4px; }
+
+::-webkit-input-placeholder {
+  color: #003366;
+  opacity: 0.5; }
+
+::-moz-placeholder {
+  color: #003366;
+  opacity: 0.5; }
+
+/* firefox 19+ */
+:-ms-input-placeholder {
+  color: #003366;
+  opacity: 0.5; }
+
+/* ie */
+input:-moz-placeholder {
+  color: #003366;
+  opacity: 0.5; }
+
+input[type=text]:focus {
+  border: 1px solid #003366; }
+
+input[type=button] {
+  width: 17%;
+  height: 80px;
+  background-color: #003366;
+  float: left;
+  color: white;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: "Open Sans"; }
+
+.tasksContainer {
+  width: 100%;
+  text-decoration: uppercase;
+  font-family: opensans;
+  text-align: center;
+  float: left;
+  margin: 0 auto;
+}
+
+.tasksContainer h2 {
+  position: relative;
+  top: 20px;
+  color: #003366; }
+
+hr {
+  height: 12px;
+  border: 0;
+  box-shadow: inset 0 12px 12px -12px #00286e; }
+
+
+.info {
+  width: 100%;
+  /*background-color: #EFEDDF;*/
+  float: left;
+  position: relative;
+  top: 40px;
+  font-family: 'Open Sans';
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 17px;
+  border-radius: 40px;
+  -webkit-box-shadow: inset 0px -9px 30px 0px rgba(204, 204, 153, 0.75);
+  -moz-box-shadow: inset 0px -9px 30px 0px rgba(204, 204, 153, 0.75);
+  box-shadow: inset 0px -9px 30px 0px rgba(204, 204, 153, 0.75);
+  margin-top: -20px; }
+
+.tasksContainer li {
+  float: left;
+  width: 49%;
+  overflow: auto;
+  height: auto;
+  min-height: 10px;
+  background: #FFF;
+  display: inline-block;
+  padding: 20px;
+  border: 1px solid #CCC;
+  color: #666;
+  border-top: 7px solid #003366;
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-right: 1%;
+  transition: all 0.3s;
+  position: relative; }
+
+/*.tasksContainer li:nth-child(even) { margin-right: 0; }*/
+.tasksContainer li:hover {
+  opacity: 0.8;
+  border-top: 7px solid #ADBDCE; }
+
+.tasksContainer p {
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 18px; }
+
+.tasksContainer li.complete {
+  opacity: 0.4;
+  border-top: 7px solid #666;
+  transition: all 0.3s;
+  border-left: 7px solid #666;
+  border-right: 7px solid #666; 
+  overflow: hidden;
+}
+
+.tasksContainer li.complete:before {
+  background: url("http://s15.postimg.org/6f33lyfl7/check.png") no-repeat;
+  position: absolute;
+  top: 11px;
+  right: 5px;
+  content: "";
+  width: 55px;
+  height: 55px;
+  background-size: 100%;
+  transition: all 0.8s ease-in; }
+
+.tasksContainer li.complete:hover {
+  border-top: 7px solid #003366;
+  opacity: 0.6; }
+
+.tasksContainer li.complete p {
+  text-decoration: line-through; }
+
+.buttonStyle {
+  border-style: solid;
+  border-width: 0px 0px 3px;
+  box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+  color: #FFFFFF;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-block;
+  font-style: normal;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  transition: all 200ms ease-in-out 0s;
+  white-space: nowrap;
+  font-family: "Gotham Rounded A","Gotham Rounded B",Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  padding: 10px;
+  font-size: 18px; }
+
+.buttonStyle-green {
+  border-color: #3AC162;
+  background-color: #5FCF80; }
+
+.buttonStyle-green :hover, .buttonStyle-green :focus, .buttonStyle-green:active {
+  background-color: #4BC970;
+  border-color: #3AC162; }
+
+.buttonStyle-blue {
+  border-color: #326E99;
+  background-color: #3F8ABF; }
+
+.buttonStyle-blue:hover, .buttonStyle-blue:focus, .buttonStyle-blue:active {
+  background-color: #397CAC;
+  border-color: #326E99; }

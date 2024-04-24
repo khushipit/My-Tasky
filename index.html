@@ -1,0 +1,60 @@
+<!DOCTYPE html>   
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta charset="utf-8" />
+ <title>My-Tasky</title>
+ <meta NAME="description" CONTENT="Simple to do list that gives you a taste of elegance and functionality. ">
+ <meta NAME="keywords" CONTENT="to do, list, task management, angular, web, design, web design, management">
+ <meta NAME="copyright" CONTENT="Copyright © 2017 Your Company. All Rights Reserved.">
+ <meta NAME="author" CONTENT="Vladimir Djukanovic">
+ <meta NAME="language" CONTENT="English">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.css">
+ 
+ <link rel="stylesheet" type="text/css" href="css/main.css">
+
+ <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-cookies.min.js"></script>
+
+</head>
+
+<body ng-app="MainApp">
+
+  <div class="centriraj" ng-controller="MainController">
+
+    <h2 id="hide">Insert the task<span id="special">s</span></h2>
+    <input type="text" placeholder="Insert task here" id="textbox" ng-model="inputTaskName" ng-enter="addTask(inputTaskName)"/>
+    <input type="button" value="Create" id="button" ng-click="addTask(inputTaskName)"/>
+
+    <div class="tasksContainer" ng-show="visibilityTasksContainer">
+      <h2>TASKS</h2>
+      <hr>
+      <ul class="tasklist">
+        <li ng-class="task.completed==true?'complete':''" ng-repeat="task in tasks" ng-dblclick="deleteTask($index)" ng-click="toggleCompleted($index)" ng-show="task.show==true">{{task.name}}</li>
+      </ul>
+      <!-- Info instructions section and interaction buttons go here -->
+      <div class="info">
+        <p style="text-align: center">** One click to complete task. Double click to delete **</p>
+        <button class="buttonStyle buttonStyle-blue active" ng-click="showNotCompletedTasks()">Flter active</button>
+        <button class="buttonStyle buttonStyle-blue complete" ng-click="showCompletedTasks()">Filter complete</button>
+        <button class="buttonStyle buttonStyle-blue showAll" ng-click="showAllTasks()">Show all</button>
+        <button class="buttonStyle buttonStyle-blue completedClear" ng-click="deleteCompleted()">Delete completed</button>
+        <button id="clearAll" class="buttonStyle buttonStyle-blue" ng-click="deleteAll()">Delete all</button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="js/app.js"></script>
+
+ <script src="js/directives/NgEnter.js"></script>
+
+  <script src="js/controllers/MainController.js"></script>
+
+
+
+  </html>
